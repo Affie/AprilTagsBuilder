@@ -1,0 +1,39 @@
+language: julia
+os:
+  - linux
+julia:
+  - 1.0
+notifications:
+  email: false
+git:
+  depth: 99999999
+cache:
+  timeout: 1000
+  directories:
+    - downloads
+env:
+  global:
+    - BINARYBUILDER_DOWNLOADS_CACHE=downloads
+    - BINARYBUILDER_AUTOMATIC_APPLE=false
+sudo: required
+
+# Before anything else, get the latest versions of things
+before_script:
+  - julia -e 'using Pkg; pkg"add BinaryProvider"; pkg"add BinaryBuilder#master"; Pkg.build()'
+
+script:
+  - julia build_tarballs.jl
+
+
+deploy:
+    provider: releases
+    api_key:
+        # Note; this api_key is only valid for Affie/AprilTagsBuilder; you need
+        # to make your own: https://docs.travis-ci.com/user/deployment/releases/
+        secure: ckPFYDZSTIA9xMQBxsaYsweYFPbGnw/IY4+mOBKe9sDJeszGmmzien+uNcTt7I9VECBf+yYTM9SVVWBNMglPX2ohkKRpDWg/n/0VGBTKI6QqV7UumKbvA1Q/ZpdhvQVLJ1pWyxSUYGD6w8UcGh7sqxPpSU7pwGl7UyfQvx7fP6O+vPZiRatCBkcXEMe4PlzZL5feOrmdQbcKCM+kGpZOU/05eD75zdjaIDpew5uubq42wqpze2vuPgQG7uRSd9wd9v3jhXesMbkbts97EGoKfhYNX+Hlsn596ZqUuGsY4SbkIjbIadcVMFZVji1bcEpUAnzWKjGvh4jBdTylzGz6R+Bj7ahyVfcYJNpC72FxaDZxH2C0UI+IGWKgpbdaF3/W+dtN9FONM+vC0BmhYcXw5MyZH6jRhl8Jz/N0kJSonHm3/CyB67yw41OjSTfmCFCmYKqJmWs095jzL2TNmlAg91tU9dmmnEVzq+35aZ9jlxrrDQb8nLhB00/JQYDdSk96ZJ7B85j1NMea083acD0nx1j5EqunMeR9xt4PZ2GMk3B9RpVkTJMGn0a97d3ssYwUlZMFtTccz/Q1X2lIs68RD9vyTMEGUKsYJEJoqRlaQeQfS1pOKlK3jEVAKeu1hvCPJoUiEJpUpGrIKgR2OaRHOzt/g4zSIiBCdu1KiK+R2e0=
+    file_glob: true
+    file: products/*
+    skip_cleanup: true
+    on:
+        repo: Affie/AprilTagsBuilder
+        tags: true
