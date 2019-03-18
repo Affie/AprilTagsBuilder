@@ -25,7 +25,8 @@ make install
 # platforms are passed in on the command line
 platforms = [
     Linux(:armv7l, libc=:glibc, call_abi=:eabihf),
-    Linux(:x86_64, libc=:glibc)
+    Linux(:x86_64, libc=:glibc),
+    MacOS(:x86_64)
 ]
 
 # The products that we will ensure are always built
