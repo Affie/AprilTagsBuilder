@@ -30,7 +30,7 @@ deploy:
     api_key:
         # Note; this api_key is only valid for Affie/AprilTagsBuilder; you need
         # to make your own: https://docs.travis-ci.com/user/deployment/releases/
-        secure: ckPFYDZSTIA9xMQBxsaYsweYFPbGnw/IY4+mOBKe9sDJeszGmmzien+uNcTt7I9VECBf+yYTM9SVVWBNMglPX2ohkKRpDWg/n/0VGBTKI6QqV7UumKbvA1Q/ZpdhvQVLJ1pWyxSUYGD6w8UcGh7sqxPpSU7pwGl7UyfQvx7fP6O+vPZiRatCBkcXEMe4PlzZL5feOrmdQbcKCM+kGpZOU/05eD75zdjaIDpew5uubq42wqpze2vuPgQG7uRSd9wd9v3jhXesMbkbts97EGoKfhYNX+Hlsn596ZqUuGsY4SbkIjbIadcVMFZVji1bcEpUAnzWKjGvh4jBdTylzGz6R+Bj7ahyVfcYJNpC72FxaDZxH2C0UI+IGWKgpbdaF3/W+dtN9FONM+vC0BmhYcXw5MyZH6jRhl8Jz/N0kJSonHm3/CyB67yw41OjSTfmCFCmYKqJmWs095jzL2TNmlAg91tU9dmmnEVzq+35aZ9jlxrrDQb8nLhB00/JQYDdSk96ZJ7B85j1NMea083acD0nx1j5EqunMeR9xt4PZ2GMk3B9RpVkTJMGn0a97d3ssYwUlZMFtTccz/Q1X2lIs68RD9vyTMEGUKsYJEJoqRlaQeQfS1pOKlK3jEVAKeu1hvCPJoUiEJpUpGrIKgR2OaRHOzt/g4zSIiBCdu1KiK+R2e0=
+        secure: HVstONU+9Ds4h3IuxftUALDYgn4CMKJDjaLp2a5jWu9dXGMpa5mB8feDo1t52aZE6cNE+VcGGpl+U8ZkUgRwl62dMXEYayQYUzDnA545k6l60TcAfZ6xWBdryeBojp4tp6C1/Baqnkef2K9cvV5Ou4a56OgznPOUSlLE+ty75CqBZrfa3adgaOihPlzAcJfm2V5nW1G+qTjEHZsHozRh6RvTa8U4OivOxliKNmQ2sx0LuDYnTtEAhzjgO/eZGUEHXcXNch0hKW5PVMHJEpVJ59GTTaZSxctlMCGjveT+hS700Zn9prqW3cBOMsy63eglEy/ERdrQJBnFa6g0IRrV4q9x1i9BqnZ/5HgMuBVTJ/t/2yXcWDMNPo88DGdHGT9DRVVN7z1qwfidq+k2sUevwZemVgw+vwiDb9VUUOzBht8UsY4hG+fTOtZRZv/Tid0rE8C8wY3D++0fkirF8BoPx3iiXlF/V+pteZpRddA7zWYuQPYPyXfMTz82n7z0sRmHxeDjhttTp+HCl9YHB6FkjwMhJfOnafV2ebrkALx/iTmr/D3uNbXpozDMLgT+XXfXHLwms8hNBXvSCtK2SHq2AypBhyD84YsC/tH6eijChm7OoORDnC4ZD+meRudeVFTTRWsPiACm0mfMeLSwIYWC236dLNEcyos4X59ao/SXCjY=
     file_glob: true
     file: products/*
     skip_cleanup: true
