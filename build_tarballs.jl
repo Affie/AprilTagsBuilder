@@ -3,12 +3,12 @@
 using BinaryBuilder
 
 name = "AprilTagsBuilder"
-version = v"0.1.0"
+version = v"0.1.1"
 
 # Collection of sources required to build AprilTagsBuilder
 sources = [
     "https://github.com/Affie/apriltags.git" =>
-    "5480f61216519ad24f211748d6bafe8133adc5ce",
+    "5cde888bd22c57f173f377d557a3e02b84f74bbb",
 
 ]
 
